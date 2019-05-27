@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OfficeSupplies</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <header class="l-container l-horizontal">
+      <h1>OfficeSupplies</h1>
+      <form target="/search">
+        <input name="q" type="search" />
+        <input type="submit" value="Search" />
+      </form>
+      <form target="/cart">
+        <input type="submit" value="Checkout" />
+      </form>
+    </header>
+    <nav class="l-container">
+      <ul class="l-horizontal">
+        <li><a href="/products">All our products</a></li>
+        <li><a href="/inspiration">Inspiration for the office</a></li>
+        <li><a href="/about">About OS</a></li>
+      </ul>
+    </nav>
+    <main class="l-container l-horizontal l-reverse">
+      <article
+        itemscope
+        itemtype="http://schema.org/Product"
+      >
+        <section class="product l-horizontal">
+          <section class="product__gallery">
+            <img itemprop="image" src="images/paper.jpg" alt="Paper" />
+            <ul class="l-horizontal">
+              <li>
+                <img itemprop="image" src="images/paper.jpg" alt="Paper" />
+              </li>
+              <li>
+                <img itemprop="image" src="images/paper.jpg" alt="Paper" />
+              </li>
+              <li>
+                <img itemprop="image" src="images/paper.jpg" alt="Paper" />
+              </li>
+            </ul>
+          </section>
+          <section class="product__info">
+            <h1 itemprop="name">Paper</h1>
+            <form class="l-horizontal">
+              <div
+                itemprop="offers"
+                itemscope
+                itemtype="http://schema.org/Offer"
+              >
+                <span itemprop="price" content="565,00">565,00</span>
+                <span itemprop="priceCurrency" content="SEK">kr</span>
+                <link
+                  itemprop="availability"
+                  href="http://schema.org/InStock"
+                />
+              </div>
+              <select name="variant-selector">
+                <option value="white">White</option>
+              </select>
+              <input type="submit" value="Buy" />
+            </form>
+            <div itemprop="description" class="is-collapsed">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                accumsan et viverra justo commodo. Proin sodales pulvinar
+                tempor. Cum sociis natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Nam fermentum, nulla luctus
+                pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+                nunc eget odio.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                accumsan et viverra justo commodo. Proin sodales pulvinar
+                tempor. Cum sociis natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Nam fermentum, nulla luctus
+                pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+                nunc eget odio.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                accumsan et viverra justo commodo. Proin sodales pulvinar
+                tempor. Cum sociis natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Nam fermentum, nulla luctus
+                pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+                nunc eget odio.
+              </p>
+              <a href="#description">Read more</a>
+            </div>
+          </section>
+        </section>
+        <ul class="product__inspiration l-horizontal">
+          <li>
+            <h3>Paper is awesome!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+              accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+              Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
+              vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget
+              odio.
+            </p>
+          </li>
+          <li>
+            <h3>Paper is awesome!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet.
+            </p>
+          </li>
+          <li>
+            <h3>Paper is awesome!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              euismod bibendum laoreet. Proin gravida dolor sit amet la.
+            </p>
+          </li>
+        </ul>
+      </article>
+      <aside>
+        <ul class="product__categories">
+          <li>Paper clips</li>
+          <li>Post-it notes</li>
+          <li>Staples</li>
+          <li>Hole punches</li>
+          <li>Binders</li>
+          <li>Staplers</li>
+          <li>Laminators</li>
+          <li>Writing utensils</li>
+          <li>Paper</li>
+          <li>Computers</li>
+          <li>Printers</li>
+          <li>Fax machines</li>
+          <li>Photocopiers</li>
+          <li>Cash registers</li>
+          <li>Office furniture</li>
+          <li>Chairs</li>
+          <li>Cubicles</li>
+          <li>Filing cabinet</li>
+          <li>Armoire desks</li>
+        </ul>
+      </aside>
+    </main>
+    <footer class="l-container l-horizontal">
+      <section>
+        <h1>OfficeSupplies</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
+          et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+          mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
+          mollis orci, sed rhoncus sapien nunc eget odio.
+        </p>
+        <small>Copyright Office Supplies 2019</small>
+      </section>
+      <nav class="l-horizontal">
+        <section>
+          <h4>Bestsellers</h4>
+          <ul class="columns-2">
+            <li>A4</li>
+            <li>A5</li>
+            <li>Pens</li>
+            <li>Staplers</li>
+            <li>A4</li>
+            <li>A5</li>
+            <li>Pens</li>
+            <li>Staplers</li>
+          </ul>
+        </section>
+        <section>
+          <h4>We're social!</h4>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+          </ul>
+        </section>
+      </nav>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
