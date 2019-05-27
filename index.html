@@ -47,7 +47,7 @@
           </section>
           <section class="product__info">
             <h1 itemprop="name">Paper</h1>
-            <form class="l-horizontal">
+            <form trigger="cart" class="l-horizontal">
               <div
                 itemprop="offers"
                 itemscope
@@ -60,9 +60,10 @@
                   href="http://schema.org/InStock"
                 />
               </div>
-              <select name="variant-selector">
-                <option value="white">White</option>
+              <select name="variant">
+                <option value="paper_white">White</option>
               </select>
+              <input type="number" value="1" name="quantity" />
               <input type="submit" value="Buy" />
             </form>
             <div itemprop="description" class="is-collapsed">
