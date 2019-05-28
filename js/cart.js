@@ -3,10 +3,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 function cart() {
-  const CART_TOTAL = '[data-target="cart-total"]';
-  const CART_QUANTITY = '[data-target="cart-quantity"]';
-  const CART_FORM = '[data-trigger="cart-form"]';
-
+  const refs = {}
   let items = [];
 
   function add(item) {
@@ -22,10 +19,10 @@ function cart() {
   function render() {
     const {total, quantity} = calculate();
     document
-      .querySelectorAll(CART_TOTAL)
+      .querySelectorAll(refs.CART_TOTAL)
       .forEach(elem => (elem.innerHTML = total));
     document
-      .querySelectorAll(CART_QUANTITY)
+      .querySelectorAll(refs.CART_QUANTITY)
       .forEach(elem => (elem.innerHTML = quantity));
   }
 
@@ -42,14 +39,22 @@ function cart() {
   function onSubmit(e) {
     e.preventDefault();
     add({
-      code: e.target.querySelector('[name="variant"]').value,
-      quantity: parseFloat(e.target.querySelector('[name="quantity"]').value) || 1,
-      price: parseFloat(e.target.querySelector('[name="price"]').value) || 0
+      code: e.target.querySelector(refs.PRODUCT_CODE).value,
+      quantity: parseFloat(e.target.querySelector(refs.PRODUCT_QUANTITY).value) || 1,
+      price: parseFloat(e.target.querySelector(refs.PRODUCT_PRICE).value) || 0
     })
   }
 
-  function init() {
-    document.querySelectorAll(CART_FORM).forEach(elem => {
+  function init(config = {
+    CART_TOTAL: '[data-target="cart-total"]',
+    CART_QUANTITY: '[data-target="cart-quantity"]',
+    CART_FORM: '[data-trigger="cart-form"]',
+    PRODUCT_CODE: '[name="variant"]', 
+    PRODUCT_QUANTITY: '[name="quantity"]', 
+    PRODUCT_PRICE: '[name="price"]'
+  }) {
+    Object.assign(refs, config);
+    document.querySelectorAll(refs.CART_FORM).forEach(elem => {
       elem.addEventListener('submit', onSubmit);
     });
   }
