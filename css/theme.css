@@ -40,3 +40,11 @@ footer nav {
   background-color: var(--color-primary);
   height: 3px;
 }
+
+.product__gallery img {
+  transition: opacity .5s;
+}
+
+.product__gallery .is-loading {
+  opacity: .25;
+}
