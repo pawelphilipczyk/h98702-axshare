@@ -3,7 +3,7 @@
  */
 
  body > header form {
-  padding: calc(var(--l-spacing) / 2);
+  padding: calc(var(--l-spacing) / 2) 0;
   text-align: right;
 }
 
@@ -26,7 +26,7 @@ body > nav a:hover:after {
   width: 100%;
 }
 
-.header__cart > * + *{
+.header__cart > * + * {
   margin-left: 1em;
 }
 
