@@ -26,8 +26,10 @@ function gallery() {
     document
       .querySelectorAll(GALLERY_MAIN)
       .forEach(elem =>
-        elem.addEventListener('load', e =>
-          e.target.classList.remove('is-loading'),
+        elem.addEventListener('load', e => {
+          const img = e.target;
+          setTimeout(() => {img.classList.remove('is-loading')}, 200)
+        }
         ),
       );
     document.querySelectorAll(GALLERY_THUMBNAILS).forEach(elem => {

@@ -42,7 +42,7 @@ footer nav {
 }
 
 .product__gallery img {
-  transition: opacity .5s;
+  transition: opacity .2s;
 }
 
 .product__gallery .is-loading {
