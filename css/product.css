@@ -51,8 +51,6 @@
   background: url('../images/theme/paper-seamless-texture.jpg');
   background-size: cover;
   padding: var(--l-spacing);
-  max-height: 12em;
-  overflow: hidden;
 }
 
 .product__inspiration li + li {
