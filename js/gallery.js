@@ -23,15 +23,18 @@ function gallery() {
   }
 
   function init() {
-    document
-      .querySelectorAll(GALLERY_MAIN)
-      .forEach(elem =>
-        elem.addEventListener('load', e => {
-          const img = e.target;
-          setTimeout(() => {img.classList.remove('is-loading')}, 200)
-        }
-        ),
+    document.querySelectorAll(GALLERY_MAIN).forEach(elem => {
+      // TODO: Calculate timeout based on css property for transition duration
+      const timeout = getComputedStyle(elem).getPropertyValue(
+        '--transition-speed',
       );
+      elem.addEventListener('load', e => {
+        const img = e.target;
+        setTimeout(() => {
+          img.classList.remove('is-loading');
+        }, 100);
+      });
+    });
     document.querySelectorAll(GALLERY_THUMBNAILS).forEach(elem => {
       elem.addEventListener('click', onClick);
     });
