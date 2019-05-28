@@ -36,21 +36,7 @@
         itemscope
         itemtype="http://schema.org/Product"
       >
-        <section class="product l-horizontal">
-          <section class="product__gallery">
-            <img itemprop="image" src="images/products/paper1.jpg" alt="Paper" data-target="gallery-main" />
-            <ul class="l-horizontal" data-trigger="gallery-thumbnails">
-              <li>
-                <a href="images/products/paper1.jpg" class="is-active" target="_blank"><img itemprop="image" src="images/products/paper1-sm.jpg" alt="Paper" /></a>
-              </li>
-              <li>
-                  <a href="images/products/paper2.jpg" target="_blank"><img itemprop="image" src="images/products/paper2-sm.jpg" alt="Paper" /></a>
-              </li>
-              <li>
-                  <a href="images/products/paper3.jpg" target="_blank"><img itemprop="image" src="images/products/paper3-sm.jpg" alt="Paper" /></a>
-              </li>
-            </ul>
-          </section>
+        <section class="product l-horizontal l-reverse">
           <section class="product__info">
             <h1 itemprop="name">Paper</h1>
             <form data-trigger="cart-form" class="l-horizontal product__form">
@@ -104,6 +90,20 @@
             </div>
             <a data-trigger="collapse" href="#description">Read more</a>
           </section>
+          <section class="product__gallery">
+              <img itemprop="image" src="images/products/paper1.jpg" alt="Paper" data-target="gallery-main" />
+              <ul class="l-horizontal" data-trigger="gallery-thumbnails">
+                <li>
+                  <a href="images/products/paper1.jpg" class="is-active" target="_blank"><img itemprop="image" src="images/products/paper1-sm.jpg" alt="Paper" /></a>
+                </li>
+                <li>
+                    <a href="images/products/paper2.jpg" target="_blank"><img itemprop="image" src="images/products/paper2-sm.jpg" alt="Paper" /></a>
+                </li>
+                <li>
+                    <a href="images/products/paper3.jpg" target="_blank"><img itemprop="image" src="images/products/paper3-sm.jpg" alt="Paper" /></a>
+                </li>
+              </ul>
+            </section>
         </section>
         <ul class="product__inspiration l-horizontal">
           <li>
@@ -134,7 +134,7 @@
           </li>
         </ul>
       </article>
-      <aside>
+      <aside class="desktop-only">
         <ul class="product__categories">
           <li>Paper clips</li>
           <li>Post-it notes</li>
