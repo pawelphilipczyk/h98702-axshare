@@ -5,12 +5,54 @@
 :root {
   --l-spacing: 1.2em;
   --font: Helvetica, sans-serif;
-  --color-primary: black;
-}  
+  --color-1: #a00d5b;
+  --color-2: #f0db44;
+  --color-3: #ed2b91;
+  --color-4: #0fa7ba;
+  --color-5: #1591a0;
 
-body > header {
-  background-color: whitesmoke;
+  --color-light: #f0f0f0;
+
+  --color-primary: var(--color-3);
+  --color-secondary: var(--color-1);
+
+  --color-action: var(--color-4);
+  --color-accent: var(--color-5);
+
+  --color-highlight: var(--color-2);
+
+  --border-light: 1px solid var(--color-light);
 }
+
+/*
+ * Global
+ */
+
+a {
+  color: var(--color-action);
+}
+
+/*
+ * Header
+ */
+
+body > header form {
+  padding: 0.5em;
+  text-align: right;
+}
+
+body > nav a {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+body > nav a:hover {
+  color: var(--color-secondary);
+}
+
+/*
+ * Footer
+ */
 
 footer {
   background-color: black;
@@ -26,25 +68,95 @@ footer small {
 }
 
 footer nav {
-  white-space:nowrap;
+  white-space: nowrap;
+}
+
+/*
+ * Product
+ */
+
+.product {
+  margin-bottom: var(--l-spacing);
+}
+
+.product h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.product__form {
+  --color-primary: var(--color-action);
+
+  border: var(--border-light);
+  padding: var(--l-spacing);
+}
+
+.product__form span {
+  color: var(--color-accent);
+  line-height: 2em;
+  font-weight: bold;
+}
+
+.product__description {
+  max-height: 15vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product__inspiration li {
+  background: url('../images/theme/paper-seamless-texture.jpg');
+  background-blend-mode: soft-light;
+  background-size: cover;
+  padding: var(--l-spacing);
+}
+
+.product__inspiration li > * + * {
+  margin-top: var(--l-spacing);
 }
 
 .product__inspiration,
 .product__categories {
-  font-size: .8em;
+  font-size: 0.8em;
+}
+
+.product__gallery {
+  --transition-speed: 0.1s;
 }
 
 .product__gallery a.is-active:after {
   content: '';
   display: block;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   height: 3px;
 }
 
 .product__gallery img {
-  transition: opacity .2s;
+  transition: opacity var(--transition-speed);
 }
 
 .product__gallery .is-loading {
-  opacity: .25;
+  opacity: 0.25;
+}
+
+/*
+ * Forms
+ */
+
+input {
+  padding: 0.5em;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='search'],
+select {
+  border: var(--border-light);
+}
+
+input[type='submit'] {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: bold;
+  border-color: var(--color-primary);
+  font-style: italic;
 }

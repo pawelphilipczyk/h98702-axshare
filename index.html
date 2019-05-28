@@ -53,7 +53,7 @@
           </section>
           <section class="product__info">
             <h1 itemprop="name">Paper</h1>
-            <form data-trigger="cart-form" class="l-horizontal">
+            <form data-trigger="cart-form" class="l-horizontal product__form">
               <div
                 itemprop="offers"
                 itemscope
@@ -73,7 +73,7 @@
               <input type="hidden" value="565.0" name="price" />
               <input type="submit" value="Buy" />
             </form>
-            <div itemprop="description" class="is-collapsed">
+            <div id="description" itemprop="description" class="product__description is-collapsed">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 euismod bibendum laoreet. Proin gravida dolor sit amet lacus
@@ -101,8 +101,8 @@
                 pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
                 nunc eget odio.
               </p>
-              <a href="#description">Read more</a>
             </div>
+            <a data-trigger="collapse" href="#description">Read more</a>
           </section>
         </section>
         <ul class="product__inspiration l-horizontal">
