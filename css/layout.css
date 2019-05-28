@@ -29,6 +29,16 @@
   margin-right: calc(var(--l-spacing));
 }
 
+.header__logo {
+  margin: 0;
+  flex-grow: 2;
+}
+
+.header__logo img {
+  max-height: 3em;
+  width: auto;
+}
+
 nav > .l-horizontal > * {
   flex-grow: 0;
 }
