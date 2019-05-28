@@ -1,0 +1,42 @@
+/*
+ * Theme
+ */
+
+:root {
+  --l-spacing: 1.2em;
+  --font: Helvetica, sans-serif;
+  --color-primary: black;
+}  
+
+body > header {
+  background-color: whitesmoke;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer section > * + * {
+  margin-top: var(--l-spacing);
+}
+
+footer small {
+  color: gray;
+}
+
+footer nav {
+  white-space:nowrap;
+}
+
+.product__inspiration,
+.product__categories {
+  font-size: .8em;
+}
+
+.product__gallery a.is-active:after {
+  content: '';
+  display: block;
+  background-color: var(--color-primary);
+  height: 3px;
+}

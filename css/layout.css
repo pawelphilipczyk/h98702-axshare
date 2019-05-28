@@ -1,0 +1,58 @@
+/*
+ * Layout
+ */
+
+ .l-container {
+  padding: var(--l-spacing);
+}
+
+.l-horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+}
+
+.l-horizontal > * {
+  flex-grow: 1;
+}
+
+.l-horizontal > * + * {
+  margin-left: calc(var(--l-spacing));
+}
+
+.l-reverse {
+  flex-direction: row-reverse;
+}
+
+.l-reverse.l-horizontal > * + * {
+  margin-left: 0;
+  margin-right: calc(var(--l-spacing));
+}
+
+nav > .l-horizontal > * {
+  flex-grow: 0;
+}
+
+main > aside {
+  width: 25%;
+}
+
+main > article {
+  width: 75%;
+}
+
+.columns-2 {
+  column-count: 2;
+}
+
+.product__gallery {
+  width: 33.33%;
+}
+
+.product__info {
+  width: 66.66%;
+}
+
+.product__inspiration > li {
+  width: 33%;
+}
