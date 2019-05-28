@@ -1,0 +1,77 @@
+/*
+ * Theme
+ */
+
+:root {
+  --l-spacing: 1.2rem;
+  --font: Helvetica, sans-serif;
+  --color-1: #a00d5b;
+  --color-2: #f0db44;
+  --color-3: #ed2b91;
+  --color-4: #0fa7ba;
+  --color-5: #1591a0;
+
+  --color-light: #f0f0f0;
+
+  --color-primary: var(--color-3);
+  --color-secondary: var(--color-1);
+
+  --color-action: var(--color-4);
+  --color-accent: var(--color-5);
+
+  --color-highlight: var(--color-2);
+
+  --border-light: 1px solid var(--color-light);
+  --border-active-size: 3px;
+  --border-active-color: var(--color-accent); 
+}
+
+/*
+ * Global
+ */
+
+a {
+  color: var(--color-action);
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+input {
+  padding: calc(var(--l-spacing)/2);
+}
+
+input[type='text'],
+input[type='number'],
+input[type='search'],
+select {
+  border: var(--border-light);
+}
+
+input[type='submit'] {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: bold;
+  border-color: var(--color-primary);
+  font-style: italic;
+}
+
+/*
+ * Icons
+ */
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.icon--cart {
+  background: url('../images/theme/icon-cart-32.png') no-repeat;
+}
+
+.icon--navigation {
+  background: url('../images/theme/icon-nav-32.png') no-repeat;
+}

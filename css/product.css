@@ -1,0 +1,97 @@
+/*
+ * Product
+ */
+
+ .product {
+  margin-bottom: var(--l-spacing);
+}
+
+.product h1 {
+  font-size: 6vw;
+  margin-bottom: var(--l-spacing);
+}
+
+.product__form {
+  --color-primary: var(--color-action);
+
+  border: var(--border-light);
+  padding: var(--l-spacing);
+}
+
+.product__form span {
+  color: var(--color-accent);
+  line-height: 2em;
+  font-weight: bold;
+}
+
+.product__form input[type="number"] {
+  max-width: 4em;
+  flex-grow: .5;
+  text-align: center;
+}
+
+.product__description {
+  max-height: 99em;
+  transition: max-height 1s ease-in-out;
+}
+
+.product__description.is-collapsed {
+  max-height: 15vw;
+  overflow: hidden;
+  box-shadow: inset 0 -8px 3px rgba(255, 255, 255, .5);
+}
+
+.product__description + a {
+  display: block;
+  text-align: center;
+  margin: var(--l-spacing);
+}
+
+.product__inspiration li {
+  background: url('../images/theme/paper-seamless-texture.jpg');
+  background-size: cover;
+  padding: var(--l-spacing);
+  max-height: 12em;
+  overflow: hidden;
+}
+
+.product__inspiration li + li {
+  margin-top: var(--l-spacing);
+}
+
+.product__inspiration,
+.product__categories {
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+
+.product__gallery {
+  --transition-speed: 0.1s;
+}
+
+.product__gallery a.is-active:after {
+  content: '';
+  display: block;
+  background-color: var(--color-secondary);
+  height: var(--border-active-size);
+}
+
+.product__gallery * + * {
+  margin-top: calc(var(--l-spacing) / 2);
+}
+
+.product__gallery img {
+  width: 100%;
+  height: auto;
+  transition: opacity var(--transition-speed);
+}
+
+.product__gallery img.is-loading {
+  opacity: 0.25;
+}
+
+@media(min-width:768px) {
+  .product__inspiration li + li {
+    margin-top: 0;
+  }
+}

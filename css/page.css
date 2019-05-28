@@ -1,0 +1,60 @@
+/*
+ * Header
+ */
+
+ body > header form {
+  padding: calc(var(--l-spacing) / 2);
+  text-align: right;
+}
+
+body > nav a {
+  display: inline-block;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+body > nav a:after {
+  content: '';
+  display: block;
+  height: var(--border-active-size);
+  width: 0%;
+  transition: width .2s ease-in-out;
+  background-color: currentColor;
+  margin-top: .2em;
+}
+
+body > nav a:hover:after {
+  width: 100%;
+}
+
+.header__cart > * + *{
+  margin-left: 1em;
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer > * + *,
+footer section > * + *,
+footer nav > * + * {
+  margin-top: var(--l-spacing);
+}
+
+footer small {
+  color: gray;
+}
+
+footer nav {
+  white-space: nowrap;
+}
+
+@media(min-width:768px) {
+  footer > * + * {
+    margin-top: 0;
+  }
+}

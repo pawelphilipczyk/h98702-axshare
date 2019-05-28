@@ -7,24 +7,36 @@
     <title>OfficeSupplies</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <link rel="stylesheet" href="css/product.css" />
   </head>
   <body>
     <header class="l-container l-horizontal">
       <figure class="header__logo">
-        <img src="images/theme/OfficeSupplies.png" alt="">
+        <img src="images/theme/OfficeSupplies.png" alt="" />
       </figure>
-      <form action="/search">
-        <input name="q" type="search" />
-        <input type="submit" value="Search" />
-      </form>
-      <form action="/cart">
-        <span data-target="cart-quantity">0</span>st
-        <em><span data-target="cart-total">0</span>kr</em>
-        <input type="submit" value="Checkout" />
-      </form>
+      <section class="form--inline">
+        <nav class="mobile-only">
+          <a href="#navigation" class="icon icon--navigation mobile-only"></a>
+        </nav>
+        <form action="/search" method="post" class="header__search">
+          <input name="q" type="search" />
+          <input type="submit" value="Search" />
+        </form>
+        <form action="/cart" method="post" class="header__cart">
+          <a
+            href="/cart"
+            aria-label="cart icon"
+            class="icon icon--cart"
+          ></a>
+          <span data-target="cart-quantity">0</span>st
+          <em class="desktop-only"><span data-target="cart-total">0</span>kr</em>
+          <input type="submit" value="Checkout" class="desktop-only" />
+        </form>
+      </section>
     </header>
-    <nav class="l-container">
+    <nav class="l-container desktop-only">
       <ul class="l-horizontal">
         <li><a href="/products">All our products</a></li>
         <li><a href="/inspiration">Inspiration for the office</a></li>
@@ -32,14 +44,11 @@
       </ul>
     </nav>
     <main class="l-container l-horizontal l-reverse">
-      <article
-        itemscope
-        itemtype="http://schema.org/Product"
-      >
+      <article itemscope itemtype="http://schema.org/Product">
         <section class="product l-horizontal l-reverse">
           <section class="product__info">
             <h1 itemprop="name">Paper</h1>
-            <form data-trigger="cart-form" class="l-horizontal product__form">
+            <form data-trigger="cart-form" class="form--inline product__form">
               <div
                 itemprop="offers"
                 itemscope
@@ -59,7 +68,11 @@
               <input type="hidden" value="565.0" name="price" />
               <input type="submit" value="Buy" />
             </form>
-            <div id="description" itemprop="description" class="product__description is-collapsed">
+            <div
+              id="description"
+              itemprop="description"
+              class="product__description is-collapsed"
+            >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 euismod bibendum laoreet. Proin gravida dolor sit amet lacus
@@ -93,19 +106,42 @@
             </a>
           </section>
           <section class="product__gallery">
-              <img itemprop="image" src="images/products/paper1.jpg" alt="Paper" data-target="gallery-main" />
-              <ul class="l-horizontal" data-trigger="gallery-thumbnails">
-                <li>
-                  <a href="images/products/paper1.jpg" class="is-active" target="_blank"><img itemprop="image" src="images/products/paper1-sm.jpg" alt="Paper" /></a>
-                </li>
-                <li>
-                    <a href="images/products/paper2.jpg" target="_blank"><img itemprop="image" src="images/products/paper2-sm.jpg" alt="Paper" /></a>
-                </li>
-                <li>
-                    <a href="images/products/paper3.jpg" target="_blank"><img itemprop="image" src="images/products/paper3-sm.jpg" alt="Paper" /></a>
-                </li>
-              </ul>
-            </section>
+            <img
+              itemprop="image"
+              src="images/products/paper1.jpg"
+              alt="Paper"
+              data-target="gallery-main"
+            />
+            <ul class="columns-3" data-trigger="gallery-thumbnails">
+              <li>
+                <a
+                  href="images/products/paper1.jpg"
+                  class="is-active"
+                  target="_blank"
+                  ><img
+                    itemprop="image"
+                    src="images/products/paper1-sm.jpg"
+                    alt="Paper"
+                /></a>
+              </li>
+              <li>
+                <a href="images/products/paper2.jpg" target="_blank"
+                  ><img
+                    itemprop="image"
+                    src="images/products/paper2-sm.jpg"
+                    alt="Paper"
+                /></a>
+              </li>
+              <li>
+                <a href="images/products/paper3.jpg" target="_blank"
+                  ><img
+                    itemprop="image"
+                    src="images/products/paper3-sm.jpg"
+                    alt="Paper"
+                /></a>
+              </li>
+            </ul>
+          </section>
         </section>
         <ul class="product__inspiration l-horizontal">
           <li>
@@ -171,7 +207,7 @@
           mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
           mollis orci, sed rhoncus sapien nunc eget odio.
         </p>
-        <small>Copyright Office Supplies 2019</small>
+        <small class="desktop-only">Copyright Office Supplies 2019</small>
       </section>
       <nav class="l-horizontal">
         <section>
@@ -199,5 +235,6 @@
     </footer>
     <script src="js/cart.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/collapse.js"></script>
   </body>
 </html>
