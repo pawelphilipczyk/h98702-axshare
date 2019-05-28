@@ -3,27 +3,35 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 function gallery() {
-  const GALLERY_MAIN = '[data-target="gallery-main"]';
-  const GALLERY_THUMBNAILS = '[data-trigger="gallery-thumbnails"] a';
-  const ACTIVE_CLASS = 'is-active';
+  const refs = {};
+  const classes = {
+    ACTIVE: 'is-active',
+    LOADING: 'is-loading'
+  }
 
   function onClick(e) {
     e.preventDefault();
     const trigger = e.currentTarget;
     if (trigger.href && !trigger.classList.contains('is-active')) {
       // Set loading and active classes
-      document.querySelector(GALLERY_MAIN).classList.add('is-loading');
-      document.querySelectorAll(GALLERY_THUMBNAILS).forEach(elem => {
-        elem.classList.remove(ACTIVE_CLASS);
+      document.querySelector(refs.GALLERY_MAIN).classList.add(classes.LOADING);
+      document.querySelectorAll(refs.GALLERY_THUMBNAILS).forEach(elem => {
+        elem.classList.remove(classes.ACTIVE);
       });
-      trigger.classList.add(ACTIVE_CLASS);
+      trigger.classList.add(classes.ACTIVE);
       // Update main image
-      document.querySelector(GALLERY_MAIN).src = trigger.href;
+      document.querySelector(refs.GALLERY_MAIN).src = trigger.href;
     }
   }
 
-  function init() {
-    document.querySelectorAll(GALLERY_MAIN).forEach(elem => {
+  function init(
+    config = {
+      GALLERY_MAIN: '[data-target="gallery-main"]',
+      GALLERY_THUMBNAILS: '[data-trigger="gallery-thumbnails"] a'
+    },
+  ) {
+    Object.assign(refs, config);
+    document.querySelectorAll(refs.GALLERY_MAIN).forEach(elem => {
       // TODO: Calculate timeout based on css property for transition duration
       const timeout = getComputedStyle(elem).getPropertyValue(
         '--transition-speed',
@@ -35,7 +43,7 @@ function gallery() {
         }, 100);
       });
     });
-    document.querySelectorAll(GALLERY_THUMBNAILS).forEach(elem => {
+    document.querySelectorAll(refs.GALLERY_THUMBNAILS).forEach(elem => {
       elem.addEventListener('click', onClick);
     });
   }
