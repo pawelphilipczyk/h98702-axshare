@@ -47,6 +47,7 @@ input[type='number'],
 input[type='search'],
 select {
   border: var(--border-light);
+  background-color: white;
 }
 
 input[type='submit'] {

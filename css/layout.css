@@ -27,6 +27,15 @@
   .desktop-only {
     display: none;
   }
+
+  .header__logo {
+    text-align: center;
+  }
+
+  footer > * + *,
+  footer nav > * + * {
+    margin-top: var(--l-spacing);
+  }
 }
 
 @media (min-width: 768px) {
@@ -86,7 +95,6 @@
   min-width: 25%;
   margin: 0;
   flex-grow: 1;
-  text-align: center;
 }
 
 .header__logo img {
@@ -103,4 +111,8 @@ nav.mobile-only {
 nav > .l-horizontal > * {
   flex-grow: 0;
   padding: calc(var(--l-spacing) / 2) 0;
+}
+
+footer section > * + * {
+  margin-top: var(--l-spacing);
 }

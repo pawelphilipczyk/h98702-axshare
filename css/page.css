@@ -39,12 +39,6 @@ footer {
   color: white;
 }
 
-footer > * + *,
-footer section > * + *,
-footer nav > * + * {
-  margin-top: var(--l-spacing);
-}
-
 footer small {
   color: gray;
 }
