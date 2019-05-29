@@ -35,12 +35,17 @@ body > nav a:hover:after {
  */
 
 footer {
-  background-color: black;
+  background-color: var(--color-accent);
+  color: #aee5ec;
+}
+
+footer h1,
+footer h4 {
   color: white;
 }
 
 footer small {
-  color: gray;
+  color: rgba(0, 0, 0, .3);
 }
 
 footer nav {
