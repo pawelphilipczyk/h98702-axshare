@@ -2,32 +2,37 @@
  * Header
  */
 
- body > header form {
+body > header form {
   padding: calc(var(--l-spacing) / 2) 0;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body > header form > * + * {
+  margin-left: 1em;
+}
+
+body > nav {
+  font-weight: bold;
 }
 
 body > nav a {
-  display: inline-block;
   color: var(--color-primary);
-  font-weight: bold;
 }
+
 body > nav a:after {
   content: '';
   display: block;
   height: var(--border-active-size);
   width: 0%;
-  transition: width .2s ease-in-out;
+  transition: width 0.2s ease-in-out;
   background-color: currentColor;
-  margin-top: .2em;
+  margin-top: 0.2em;
 }
 
 body > nav a:hover:after {
   width: 100%;
-}
-
-.header__cart > * + * {
-  margin-left: 1em;
 }
 
 /*
@@ -45,14 +50,14 @@ footer h4 {
 }
 
 footer small {
-  color: rgba(0, 0, 0, .3);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 footer nav {
   white-space: nowrap;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   footer > * + * {
     margin-top: 0;
   }

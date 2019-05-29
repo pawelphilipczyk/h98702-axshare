@@ -3,7 +3,7 @@
  */
 
 :root {
-  --l-spacing: 1.2rem;
+  --l-spacing: 1rem;
   --font: Helvetica, sans-serif;
   --color-1: #a00d5b;
   --color-2: #f0db44;
@@ -23,12 +23,16 @@
 
   --border-light: 1px solid var(--color-light);
   --border-active-size: 3px;
-  --border-active-color: var(--color-accent); 
+  --border-active-color: var(--color-accent);
 }
 
 /*
  * Global
  */
+
+body {
+  line-height: 1.4;
+}
 
 a {
   color: var(--color-action);
@@ -39,7 +43,7 @@ article a:hover {
 }
 
 input {
-  padding: calc(var(--l-spacing)/2);
+  padding: calc(var(--l-spacing) / 2);
 }
 
 input[type='text'],
