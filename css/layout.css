@@ -31,6 +31,16 @@
   .header__logo {
     text-align: center;
   }
+  
+  .header__logo img {
+    max-width: 50%;
+  }
+
+  .header__cart {
+    position: absolute;
+    top: calc(var(--l-spacing) / 2);
+    right: var(--l-spacing);
+  }
 
   footer > * + *,
   footer nav > * + * {
