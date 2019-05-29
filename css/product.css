@@ -48,9 +48,12 @@
 }
 
 .product__inspiration li {
-  background: url('../images/theme/paper-seamless-texture.jpg');
-  background-size: cover;
+  background-color: var(--color-highlight);
   padding: var(--l-spacing);
+}
+
+.product__inspiration li > * + *{
+  margin-top: 1em;
 }
 
 .product__inspiration li + li {
