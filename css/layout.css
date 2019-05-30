@@ -31,7 +31,7 @@
   .header__logo {
     text-align: center;
   }
-  
+
   .header__logo img {
     max-width: 50%;
   }
@@ -92,7 +92,7 @@
     width: 66.66%;
   }
 
-  .product__inspiration > li {
+  .product__inspiration li {
     width: 33%;
   }
 }
@@ -103,7 +103,6 @@
 
 .header__logo {
   min-width: 25%;
-  margin: 0;
   flex-grow: 1;
 }
 
@@ -123,6 +122,18 @@ nav > .l-horizontal > * {
   padding: calc(var(--l-spacing) / 2) 0;
 }
 
+.product > * + *,
+.product__info > * + *,
+.product__gallery * + *,
+.product__inspiration,
+.product__inspiration > * * + *,
 footer section > * + * {
   margin-top: var(--l-spacing);
+}
+
+@media (min-width: 768px) {
+  .product__inspiration > * * + *,
+  footer > * + * {
+    margin-top: 0;
+  }
 }

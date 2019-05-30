@@ -10,7 +10,7 @@ body > header form {
 }
 
 body > header form > * + * {
-  margin-left: 1em;
+  margin-left: calc(var(--l-spacing) / 2);
 }
 
 @media (max-width: 768px) {
@@ -21,7 +21,7 @@ body > header form > * + * {
   .header__cart span {
     color: white;
     background-color: var(--color-primary);
-    font-size: .8em;
+    font-size: 0.8em;
     display: inline-block;
     line-height: 1.2em;
     width: 1.2em;
@@ -74,10 +74,4 @@ footer small {
 
 footer nav {
   white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-  footer > * + * {
-    margin-top: 0;
-  }
 }
